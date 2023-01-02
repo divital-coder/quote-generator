@@ -1,17 +1,42 @@
 <!DOCTYPE html>
 <html lang="en">
-<head>
-  <meta charset="UTF-8">
-  <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <meta http-equiv="X-UA-Compatible" content="ie=edge">
-  <title>Document</title>
-  <link rel="stylesheet" href="./styles.css">
-  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0/css/all.min.css" integrity="sha512-9usAa10IRO0HhonpyAIVpjrylPvoDwiPUiKdWk5t3PyolY1cOd4DSE0Ga+ri4AuTroPR5aQvXU9xC6qOPnzFeg==" crossorigin="anonymous" referrerpolicy="no-referrer" />
-  <link rel="icon" href="./images/icons8-nostalgia-100.png">
-</head>
-<body>
-  <h1>Commited changes to the github repository mate :)</h>
 
-<script src="./app.js"></script>
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>"QUOTE GENERATOR"</title>
+    <link rel="stylesheet" href="./styles.css">
+    <link rel="icon" href="./images/icons8-nostalgia-100.png">
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0-alpha1/dist/css/bootstrap.min.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.2.1/css/all.min.css">
+</head>
+
+<body>
+    <div class="container">
+        <div style="text-align: center;" class="first_half">
+            <i class="fa-solid fa-quote-left"></i>
+            <h1 class="main_quote">The one that doesn't kill makes us stronger!</h1><i class="fa-solid fa-quote-right"></i>
+        </div>
+
+        <div style="margin-top:2rem;" class="second_half">
+            <div class="author">
+                <i class="fa-solid fa-user"></i>
+                <h1 style="font-style: italic;" class="main_quote_author">Nietzsche</h1>
+            </div>
+
+            <div class="share">
+                <label for="tweet_btn">Tweet</label>
+                <button class="tweet_btn btn btn-primary"><i class="fa-brands fa-twitter"></i></button>
+            </div>
+        </div>
+
+
+        <div class="generate_container">
+            <button style="font-size:0.8rem;" class="quote_btn btn btn-primary">Generate Another</button>
+        </div>
+    </div>
+    <script src="./app.js"></script>
 </body>
+
 </html>
