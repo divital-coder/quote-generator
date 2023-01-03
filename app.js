@@ -3,11 +3,27 @@ const quote_text = document.querySelector(".main_quote");
 const quote_text_author = document.querySelector(".main_quote_author");
 const generate_button = document.querySelector(".quote_btn");
 const tweet_button = document.querySelector(".tweet_btn");
+const loader_button = document.getElementById("loader");
+const elements_container = document.querySelector(".container");
+
+function loading() {
+    elements_container.style.setProperty("visibility", "hidden");
+    loader_button.style.setProperty("visibility", "visible");
+
+}
+
+function completed_loading() {
+    elements_container.style.setProperty("visibility", "visible");
+    loader_button.style.setProperty("visibility", "hidden");
+}
 
 function functionality(quote, author) {
+    loading();
     quote_text.textContent = quote;
     quote_text_author.textContent = author;
+    setTimeout(completed_loading, 500);
 }
+
 //get quotes from API
 let apiQuotes = [];
 async function getQuotes() {
@@ -25,6 +41,7 @@ async function getQuotes() {
         // return [quote_gen, quote_gen_author];
     } catch (error) {
         console.log(error);
+        loading();
     }
 }
 // data = getQuotes();
